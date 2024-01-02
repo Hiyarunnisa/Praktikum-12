@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Image_picker(){
+            const list_gambar = ["BTS.png", "EXO.png", "BP.png"];
+            let pilihan = document.getElementById("option").value;
+
+            if(pilihan == "bts"){
+                let select = list_gambar[0];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if(pilihan == "exo"){
+                let select = list_gambar[1];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if(pilihan == "blackpink"){
+                let select = list_gambar[2];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Images Picker</h1>
+    <select name="" id="option" onchange="Image_picker()">
+        <option value="">Pilih sekte kamu</option>
+        <option value="bts">BTS</option>
+        <option value="exo">EXO</option>
+        <option value="blackpink">Blackpink</option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="500px"> 
+    </div>
+</body>
+</html>

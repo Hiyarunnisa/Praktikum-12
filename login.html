@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script>
+        function cekLogin() {
+  
+    var usernameInput = document.getElementById("username").value;
+    var passwordInput = document.getElementById("password").value;
+  
+    var usernameValid = "ahmad2017";
+    var passwordValid = "integrity";
+
+    if (usernameInput === usernameValid && passwordInput === passwordValid) {
+        alert("Login Sukses");
+    
+        window.location.href = "halaman-baru.html";
+    } else {
+        alert("Login Gagal");
+    }
+}
+    </script>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="ahmad2017" required>
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="integrity" required>
+        <br>
+        <br>
+        <button type="button" onclick="cekLogin()">Login</button>
+    </form>
+</body>
+</html>
